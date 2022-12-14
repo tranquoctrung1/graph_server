@@ -26,4 +26,7 @@ module.exports = gql`
         deleteOrder(ID: ID!): Boolean
         editOrder(ID: ID!, orderInput: OrderInput): Boolean
     }
+
+    # enum for data validation
+    # union for handling error
 `;

@@ -1,8 +1,11 @@
 const Order = require('../models/order.model');
 
+//parent is get data from previous level (will undetstand when console.log parent)
+// context is get any data passed from apollo server
+// infor is get data about information of this request
 module.exports = {
     Query: {
-        async order(_, { ID }) {
+        async order(parent, { ID }, context, info) {
             return await Order.findById(ID);
         },
 
